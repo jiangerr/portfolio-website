@@ -7,7 +7,7 @@ body {
   font-family: 'EB Garamond', serif;
   color: #333;
   background: #DDD;
-  overflow: hidden;
+  overflow-y: scroll;
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
