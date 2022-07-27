@@ -25,6 +25,8 @@
 .container {
     will-change: contents;
     height: 100%;
+    left: 0px;
+    right: 100px;
     // min-height: 566px;
     position: absolute;
     opacity: 0;

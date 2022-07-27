@@ -1,6 +1,5 @@
 .home-page {
-    margin-right: 100px;
-    padding: 15px 0px 15px 15px;
+    padding: 15px;
     // .text-zone {
     //     position: absolute;
     //     top: 50%;
@@ -45,3 +44,30 @@
     }
 }
 
+.image-viewer-background {
+    background-color: #000;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // opacity: .5;
+}
+
+.image-viewer-background * {
+    z-index: 1;
+    pointer-events: none;
+}
+
+.image-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: #999;
+    // position: absolute;
+    width: 50%;
+    margin: auto;
+    padding: 100px 60px;
+    right: 100px;
+    
+}
