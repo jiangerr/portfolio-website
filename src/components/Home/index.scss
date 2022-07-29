@@ -1,33 +1,12 @@
 .home-page {
     padding: 15px;
-    // .text-zone {
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 10%;
-    //     transform: translateY(-50%);
-    //     width: 40%;
-    //     max-height: 90%;
-    // }
-    // h1 {
-    //     color: #000;
-    //     font-size: 20px;
-    //     font-style: italic;
-    //     font-weight: 750; 
-
-    //     &::before {
-    //         content: '<h1>';
-    //         // TODO
-    //     }
-    //     img {
-    //         width: 32px;
-    //     }
-    // }
 }
 
 .masonry-grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
     // width: 91.5%;
 }
 
@@ -45,29 +24,61 @@
 }
 
 .image-viewer-background {
-    background-color: #000;
+    display: grid;
+    grid-template-rows: 90% 10%;
+
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
-    // opacity: .5;
-}
-
-.image-viewer-background * {
     z-index: 1;
-    pointer-events: none;
+
+    background-color: #DDD; // TODO: replace with $background-color
 }
 
-.image-viewer {
-    display: flex;
-    align-items: center;
+// .image-viewer {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     z-index: 1;
+//     background: #DDD; // TODO: replace with $background-color
+//     // position: absolute;
+//     // width: 50%;
+//     margin: auto;
+//     padding: 100px 60px;
+//     right: 100px;
+// }
+
+.fullsize-image {
+    display: grid;
+    grid-row-start: 1;
+
     justify-content: center;
-    z-index: 2;
-    background: #999;
-    // position: absolute;
-    width: 50%;
     margin: auto;
-    padding: 100px 60px;
-    right: 100px;
-    
+    margin-bottom: 0;
+    z-index: 1;
+    top: 15px;
+    max-height: 100%;
+    max-width: 92%;
+
+    animation: fadeIn 1s forwards;
+}
+
+.viewer-textzone {
+    display: flex;
+    justify-content: center;
+    bottom: 2vh;
+    z-index: 2;
+
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.divider {
+    font-style: normal;
 }

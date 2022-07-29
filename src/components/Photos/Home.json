@@ -2,19 +2,25 @@
     {
         "id": 1,
         "src": "https://live.staticflickr.com/65535/52139613956_1969a11029_h.jpg",
-        "alt": "Sintayehu Vissa, NCAA Nationals 2022, 1500M",
-        "description": "Lorem ipsum"
+        "alt": "Sintayehu Vissa / NCAA Outdoor Nationals / 11 June 2022",
+        "subject": "Sintayehu Vissa",
+        "meet": "NCAA Outdoor Nationals",
+        "date": "11 June 2022"
     },
     {
         "id": 2,
         "src": "https://live.staticflickr.com/65535/52138901912_baab627fc5_h.jpg",
-        "alt": "Abby Steiner, NCAA Nationals 2022, 4x400M",
-        "description": "Lorem ipsum"
+        "alt": "Abby Steiner / NCAA Outdoor Nationals / 11 June 2022",
+        "subject": "Abby Steiner",
+        "meet": "NCAA Outdoor Nationals",
+        "date": "11 June 2022"
     },
     {
         "id": 3,
         "src": "https://live.staticflickr.com/65535/52139817816_7ec183d4c3_h.jpg",
-        "alt": "Various, NCAA Nationals 2022, 5000M",
-        "description": "Lorem ipsum"
+        "alt": "Women's 5K / NCAA Outdoor Nationals / 11 June 2022",
+        "subject": "Women's 5K",
+        "meet": "NCAA Outdoor Nationals",
+        "date": "11 June 2022"
     }
 ]

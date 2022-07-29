@@ -3,7 +3,8 @@ import Masonry from 'react-masonry-css';
 import Photos from '../Photos/Home.json';
 // import { Link } from 'react-router-dom';
 import './index.scss';
-import React, { useState, useCallback, stopPropagation } from 'react';
+import React, { useState, useCallback, getAttribute } from 'react';
+
 const Columns = {
     default: 4,
     1500: 3,
@@ -11,43 +12,76 @@ const Columns = {
     900: 1
 };
 
+const MinFullsizeHeight = 640;
+
 const Home = () => {
+    // used for fullsize image viewer + caption
+
+    // image src + alt text
     const [currentImg, setCurrentImg] = useState(0);
+    const [currentImgAlt, setCurrentImgAlt] = useState('');
+
+    // image caption
+    const [currentImgSubject, setCurrentImgSubject] = useState('');
+    const [currentImgMeet, setCurrentImgMeet] = useState('');
+    const [currentImgDate, setCurrentImgDate] = useState('');
+
     const [viewerOpen, setViewerOpen] = useState(false);
 
-    const openViewer = useCallback((photo) => {
-        setCurrentImg(photo);
-        setViewerOpen(true);
-        // console.log(`test ${photo.id}`);
-    });
+    const openViewer = useCallback((e) => {
+        // disable single image viewing if window isn't large enough
+        if (window.innerHeight > MinFullsizeHeight && window.innerWidth > window.innerHeight) {
+            setCurrentImg(e.target.src);
+            setCurrentImgAlt(e.target.alt);
+            setCurrentImgSubject(e.target.getAttribute('data-subject'));
+            setCurrentImgMeet(e.target.getAttribute('data-meet'));
+            setCurrentImgDate(e.target.getAttribute('data-date'));
+            setViewerOpen(true);
+            // console.log(currentImg);
+        }
+    }, []);
 
     const closeViewer = () => {
         setCurrentImg(0);
         setViewerOpen(false);
-        console.log('closed');
     };
 
+    // closes out of fullsize image viewer if window becomes too short
+    const closeViewerOnHeight = () => {
+        if (window.innerHeight < MinFullsizeHeight) {
+            closeViewer();
+        }
+    };
+    window.addEventListener('resize', closeViewerOnHeight);
+
+    // prevent onClick from applying to child elements
     const stopChildClick = (e) => {
-        e.stopImmediatePropagation();
-        console.log('stop');
+        e.stopPropagation();
     };
 
     return (
         <div className="container">
             {viewerOpen ?
+                // single image viewer upon image click
                 <div className='image-viewer-background' onClick={closeViewer}>
-                    <div className='image-viewer' onClick={() => console.log('help')}>
-                        <h1>TEST</h1>
-                        {currentImg}
-                    </div>
+                    <img className='fullsize-image' src={currentImg} alt={currentImgAlt} onClick={stopChildClick} />
+                    <p className='viewer-textzone' onClick={stopChildClick}>
+                        {currentImgSubject}
+                        <span className='divider'>┊</span>
+                        {currentImgMeet}
+                        <span className='divider'>┊</span>
+                        {currentImgDate}
+                    </p>
                 </div>
                 :
+                // default masonry grid homepage
                 <div className="home-page">
                     <Masonry breakpointCols={Columns} className="masonry-grid" columnClassName='masonry-grid_column'>
-                        {Photos.map(({ id, src, alt }) => {
+                        {Photos.map(({ id, src, alt, subject, meet, date }) => {
                             return (
-                                <div key={id} className="masonry-grid-column">
-                                    <img src={src} alt={alt} onClick={openViewer} width="90%" />
+                                <div key={id} className='masonry-grid-column'>
+                                    <img src={src} alt={alt} data-subject={subject} data-meet={meet} data-date={date} width='90%'
+                                        onClick={openViewer} />
                                 </div>
                             );
                         })}
@@ -57,4 +91,4 @@ const Home = () => {
     );
 }
 
-export default Home
+export default Home;
