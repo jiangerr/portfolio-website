@@ -1,9 +1,7 @@
-// import LogoEJ from '../../assets/images/logo.svg';
 import Masonry from 'react-masonry-css';
 import Photos from '../Photos/Home.json';
-// import { Link } from 'react-router-dom';
 import './index.scss';
-import React, { useState, useCallback, getAttribute } from 'react';
+import React, { useState, useCallback } from 'react';
 
 const Columns = {
     default: 4,

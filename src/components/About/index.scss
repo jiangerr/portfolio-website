@@ -1,25 +1,49 @@
 .about-page {
+    display: grid;
+    grid-template-rows: 75px 200px;
+    grid-template-columns: 40% 60%;
     margin-right: 100px;
     padding: 15px 0px 15px 15px;
 
-    .text-zone {
-        position: block;
-        padding: 0px 15px;
+    .toptext-zone {
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-content: center;
+        text-align: center;
 
         h1 {
             color: #000;
-            font-size: 30px;
+            font-size: 26px;
             font-style: italic;
             font-weight: 125;
-            text-align: center;
         }
     }
 
     .picture-zone {
-        padding: 0px 15px;
+        display: grid;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        margin: 15px;
+
         img {
-            display: block;
-            width: 500px;
+            max-width: 100%;
         }
+    }
+
+    .text-zone {
+        display: grid;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        font-size: 16px;
+        line-height: 24px;
     }
 }
