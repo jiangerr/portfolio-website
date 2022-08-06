@@ -126,3 +126,22 @@
         }
     }
 }
+
+// adjust sidebar size for smaller mobile displays
+@media (max-width: 500px) {
+    .nav-bar {
+        width: 75px;
+
+        ul.no-bullets {
+            width: 75px;
+            li {
+                a {
+                    padding: 2px 2px;
+                    width: 50px;
+                    font-size: 18px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

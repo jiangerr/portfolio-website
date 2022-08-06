@@ -12,14 +12,39 @@
 
 .masonry-grid-column {
     background-clip: padding-box;
-    margin-left: 7px;
-    margin-right: -41px;
-    margin-bottom: 11px;
-    margin-top: 7px;
+    margin-left: .5vw;
+    margin-right: -2.5vw;
+    margin-bottom: .36vw;
+    margin-top: .36vw;
     transition: .2s;
 
     &:hover {
         opacity: .7;
+    }
+}
+
+// adjust gutter size based on window size
+
+// pixel values where upon which masonry grid condenses (values from Columns const)
+$threeRows: 1500px;
+$twoRows: 1200px;
+$oneRow: 900px;
+
+@media (max-width: $threeRows) {
+    .masonry-grid-column {
+        margin-left: .5vw;
+        margin-right: -3vw;
+        margin-bottom: .55vw;
+        margin-top: .55vw;
+    }
+}
+
+@media (max-width: $twoRows) {
+    .masonry-grid-column {
+        margin-left: .5vw;
+        margin-right: -4.5vw;
+        margin-bottom: .5vw;
+        margin-top: .5vw;
     }
 }
 
@@ -34,11 +59,6 @@
 
     background-color: #DDD; // TODO: replace with $background-color
 }
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
 
 .fullsize-image {
     display: grid;
