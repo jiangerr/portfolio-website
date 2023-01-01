@@ -5,8 +5,7 @@ html {
 body {
   margin: 0;
   font-family: 'EB Garamond', serif;
-  color: #333;
-  background: #DDD;
+  background-color: #EEE; /* needs to be manually updated with $background-color*/
   overflow-y: scroll;
   display: block;
   -webkit-font-smoothing: antialiased;

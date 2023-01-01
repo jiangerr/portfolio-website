@@ -5,7 +5,7 @@ import React, { useState, useCallback } from 'react';
 
 const Columns = {
     default: 4,
-    1500: 3,
+    1400: 3,
     1200: 2,
     900: 1
 };

@@ -1,3 +1,10 @@
+@import '../../GlobalVars.scss';
+
+// pixel values where upon which masonry grid condenses (values from Columns const)
+$threeRows: 1400px;
+$twoRows: 1200px;
+$oneRow: 900px;
+
 .home-page {
     padding: 15px;
 }
@@ -16,19 +23,17 @@
     margin-right: -2.5vw;
     margin-bottom: .36vw;
     margin-top: .36vw;
-    transition: .2s;
 
     &:hover {
         opacity: .7;
     }
+    
+    img {
+        cursor: zoom-in;
+    }
 }
 
 // adjust gutter size based on window size
-
-// pixel values where upon which masonry grid condenses (values from Columns const)
-$threeRows: 1500px;
-$twoRows: 1200px;
-$oneRow: 900px;
 
 @media (max-width: $threeRows) {
     .masonry-grid-column {
@@ -49,46 +54,52 @@ $oneRow: 900px;
 }
 
 .image-viewer-background {
-    display: grid;
-    grid-template-rows: 90% 10%;
+    display: flex;
+    flex-wrap: wrap;
 
     height: 100%;
     align-items: center;
     justify-content: center;
     z-index: 1;
 
-    background-color: #DDD; // TODO: replace with $background-color
+    background-color: $background-color;
+
+    cursor: zoom-out;
 }
 
 .fullsize-image {
-    display: grid;
-    grid-row-start: 1;
-
     justify-content: center;
-    margin: auto;
-    margin-bottom: 0;
-    z-index: 1;
-    top: 15px;
-    max-height: 100%;
-    max-width: 92%;
 
-    animation: fadeIn 1s forwards;
+    max-height: 92%;
+    max-width: 92%;
+    
+    margin: 0 auto;
+    padding-top: 15px;
+    z-index: 1;
+
+    animation: fadeIn .7s forwards;
+
+    cursor: default;
 }
 
 .viewer-textzone {
     display: flex;
+    width: 100%;
     justify-content: center;
     bottom: 2vh;
     z-index: 2;
 
     text-align: center;
-    font-size: 15px;
+    white-space: nowrap; //TODO
+    font-size: 1.5em;
     font-style: italic;
     font-weight: 500;
 
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #000;
+    color: $text-color;
+
+    cursor: default;
 }
 
 .divider {

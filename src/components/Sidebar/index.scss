@@ -1,3 +1,5 @@
+@import '../../GlobalVars.scss';
+
 .nav-bar {
     width: 100px;
     height: 100%;
@@ -6,7 +8,7 @@
 
     display: grid;
     grid-template-rows: 120px 240px 60px;
-    background: #DDD; // TODO: replace with $background-color
+    background: $background-color;
     z-index: 3;
     min-height: 300px;
 
@@ -47,7 +49,7 @@
             }
 
             &:hover {
-                color: #111111;
+                color: #000;
 
                 svg {
                     opacity: 0;
@@ -118,6 +120,9 @@
                 width: 36px;
                 font-size: 22px;
                 line-height: 24px;
+                &:before{
+                    text-rendering: optimizeLegibility;                    
+                }
 
                 &:hover {
                     opacity: .5;
