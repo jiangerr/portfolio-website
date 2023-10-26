@@ -1,8 +1,8 @@
 {
   "name": "portfolio-website",
   "version": "0.1.0",
-  "homepage": "https://jiangerr.github.io/portfolio-website",
-  "private": false,
+  "homepage": "https://www.ethantjiang.com",
+  "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
