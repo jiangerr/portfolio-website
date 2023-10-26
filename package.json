@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "homepage": "https://jiangerr.github.io/portfolio-website",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
