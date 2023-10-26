@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.6fe6dedd.css",
-    "main.js": "./static/js/main.13a0cf10.js",
-    "static/js/787.749b4a44.chunk.js": "./static/js/787.749b4a44.chunk.js",
-    "static/media/about-picture2.jpeg": "./static/media/about-picture2.f70a75b1e8403e6c079e.jpeg",
-    "static/media/EBGaramond-VariableFont_wght.ttf": "./static/media/EBGaramond-VariableFont_wght.9b50cef174ca2f6a65b1.ttf",
-    "static/media/logo.svg": "./static/media/logo.c077ed9b40c632e7f3a3a402e33c3707.svg",
-    "index.html": "./index.html",
-    "main.6fe6dedd.css.map": "./static/css/main.6fe6dedd.css.map",
-    "main.13a0cf10.js.map": "./static/js/main.13a0cf10.js.map",
-    "787.749b4a44.chunk.js.map": "./static/js/787.749b4a44.chunk.js.map"
+    "main.css": "/www.ethantjiang.com/static/css/main.68317199.css",
+    "main.js": "/www.ethantjiang.com/static/js/main.d518c66a.js",
+    "static/js/787.749b4a44.chunk.js": "/www.ethantjiang.com/static/js/787.749b4a44.chunk.js",
+    "static/media/about-picture2.jpeg": "/www.ethantjiang.com/static/media/about-picture2.f70a75b1e8403e6c079e.jpeg",
+    "static/media/EBGaramond-VariableFont_wght.ttf": "/www.ethantjiang.com/static/media/EBGaramond-VariableFont_wght.9b50cef174ca2f6a65b1.ttf",
+    "static/media/logo.svg": "/www.ethantjiang.com/static/media/logo.c077ed9b40c632e7f3a3a402e33c3707.svg",
+    "index.html": "/www.ethantjiang.com/index.html",
+    "main.68317199.css.map": "/www.ethantjiang.com/static/css/main.68317199.css.map",
+    "main.d518c66a.js.map": "/www.ethantjiang.com/static/js/main.d518c66a.js.map",
+    "787.749b4a44.chunk.js.map": "/www.ethantjiang.com/static/js/787.749b4a44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fe6dedd.css",
-    "static/js/main.13a0cf10.js"
+    "static/css/main.68317199.css",
+    "static/js/main.d518c66a.js"
   ]
 }
