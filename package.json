@@ -1,7 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://jiangerr.github.io/portfolio-website",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
